@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        
+        <script>
+              var angka=prompt("Masukkan Angka : ");
+            function rekursif(bil){
+                if(bil==1){
+                    return 1;
+                }
+                else{
+                    return bil*rekursif(bil-1);
+                }
+            
+                
+            }
+            document.write("Faktorial dari "+angka+"<br>");
+            document.write("Hasil Faktorial : "+rekursif(angka));
+
+        </script>
+        
+    </body>
+</html>

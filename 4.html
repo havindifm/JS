@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        
+        <script>
+            var js=0;
+            var ms=0;
+            var ds=0;
+            //ParseInt = Mengubah String menjadi int
+var j1=parseInt(prompt("Masukkan Jam Pertama :")); 
+var m1=parseInt(prompt("Masukkan Menit Pertama :"));
+var d1=parseInt(prompt("Masukkan detik Pertama :"));
+
+var j2=parseInt(prompt("Masukkan Jam Kedua :"));
+var m2=parseInt(prompt("Masukkan Menit Kedua :"));
+var d2=parseInt(prompt("Masukkan detik Kedua :"));
+
+document.write("Jam Pertama "+j1+" jam :"+m1+" menit :"+d1+" detik"+"<br>");
+document.write("Jam Kedua "+j2+" jam :"+m2+" menit :"+d2+" detik"+"<br>"+"<br>");
+if(j1>j2){
+    if(d1>d2){
+        ds=d1-d2;
+    }
+    else if(d1<d2){
+        d1+=60;
+        m1-=1;
+        ds=d1-d2;
+    }
+    else{
+        ds=0;
+    }
+    if(m1>m2){
+        ms=m1-m2;
+    }
+    else if(m1<m2){
+        m1+=60;
+        j1-=1;
+        ms=m1-m2;
+    }
+    else{
+        ms=0;
+    }
+    js=j1-j2;
+}
+else if(j2>j1){
+    if(d2>d1){
+        ds=d2-d1;
+    }
+    else if(d2<d1){
+        d2+=60;
+        m2-=1;
+        ds=d2-d1;
+    }
+    else{
+        ds=0;
+    }
+    if(m2>m1){
+        ms=m2-m1;
+    }
+    else if(m2<m1){
+        m2+=60;
+        j2-=1;
+        ms=m2-m1;
+    }
+    else{
+        ms=0;
+    }
+    js=j2-j1;
+}
+else if(j1=j2){
+    if(d1>d2){
+        ds=d1-d2;
+    }
+    else if(d1<d2){
+        d1+=60;
+        m1-=1;
+        ds=d1-d2;
+    }
+    else{
+        ds=0;
+    }
+    if(m1>m2){
+        ms=m1-m2;
+    }
+    else if(m1<m2){
+        m1+=60;
+        j1-=1;
+        ms=m1-m2;
+    }
+    else{
+        ms=0;
+    }
+    js=0;
+}
+else if(j2=j1){
+    if(d2>d1){
+        ds=d2-d1;
+    }
+    else if(d2<d1){
+        d2+=60;
+        m2-=1;
+        ds=d2-d1;
+    }
+    else{
+        ds=0;
+    }
+    if(m2>m1){
+        ms=m2-m1;
+    }
+    else if(m2<m1){
+        m2+=60;
+        j2-=1;
+        ms=m2-m1;
+    }
+    else{
+        ms=0;
+    }
+    js=0;
+}
+
+
+document.write("Selisih "+js+" jam: "+ms+" menit : "+ds+" detik : ");
+        </script>
+        
+    </body>
+</html>
